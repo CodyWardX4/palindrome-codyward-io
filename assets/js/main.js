@@ -4,7 +4,7 @@ function displayText(){
 
 	var displayInput = userInput;
 
-	var noSpacesNoCommas = userInput.replace(/[\s,.]+/g, '');
+	var noSpacesNoCommas = userInput.replace(/[\s,.-[\]!?]+/g, '');
 	var splitInput = noSpacesNoCommas.split("");
 	var reverseInput = splitInput.reverse();
 	var rejoinInput = reverseInput.join("");
