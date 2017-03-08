@@ -1,0 +1,243 @@
+/*##################################################
+    DEVELOPER: CODY L. WARD
+##################################################*/
+
+// VARIABLE IMPORT
+@import '_variables';
+
+html, body, {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    color: $gray80;
+}
+p, h1 {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+h1 {
+    margin: 0px 10px;
+    padding: 20px 0px;
+    font-size: 1.3em;
+}
+body {background: $gray80;}
+button:focus {outline:0;}
+
+// CUSTOM HELPER CLASSES
+.wrapper {
+    min-height: calc(100% - 100px);
+    height: auto;
+    width: 1200px;
+    margin: 0px auto;
+    display: block;
+    background: white;
+    overflow: hidden;
+}
+.box {
+    display: block;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+//HEADER
+.header {
+    height: 100px;
+    width: auto;
+    background: $violet40;
+    padding: 10px;
+    img {
+        height: 100%;
+        max-height: 100px;
+        width: auto;
+        margin: 0px auto;
+        display: block;
+    }
+
+}
+
+// MAIN CONTENT
+.heading-box,
+.results-box {
+    height: auto;
+    width: 100%;
+    padding: 20px 10px;
+    background: #DDD;
+    text-align: center;
+    display: block;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.results-box {
+    padding: 0px !important;
+    min-height: 70px;
+    height: auto;
+}
+.results-content {
+    margin: 10px;
+    height: auto;
+    overflow-x: scroll !important;
+}
+.input-section {
+    padding: 20px 0px;
+    margin: 0px auto;
+    input[type="text"] {
+        position: relative;
+        border-radius: 40px;
+        font-weight: 100;
+        display: block;
+        margin: 0px auto;
+        color: $violet40;
+        height: 60px;
+        width: 400px;
+        padding: 0px 0px 0px 20px;
+        border: 2px solid $violet40;
+        font-size: 2em;
+        -webkit-appearance:none; //Removes inner shadow in Safari
+        &:focus {outline: 0px;}
+    }
+    input[type="button"]{
+        height: auto;
+        margin: 0px auto;
+        padding: 10px 40px;
+        border-radius: 50px;
+        background: $gray10;
+        border: none;
+        position: relative;
+        display: block;
+        font-size: 1.5em;
+        color: white;
+        background: $teal20;
+        -webkit-appearance:none; //Removes glossy effect in Safari
+        &:hover {
+            cursor: pointer;
+        }
+        &:focus {outline: 0px;}
+    }
+}
+
+// INPUT STYLES
+.input-style,
+.input-reverse,
+.input-true,
+.input-false {
+    padding: 5px 20px;
+    border-radius: 100px;
+    line-height: 50px;
+    background: white;
+}
+.input-style{
+  border: solid 2px $violet40;
+  color: $violet40;
+}
+.input-reverse {
+  border: solid 2px $teal20;
+  color: $teal20;
+}
+.input-true {
+  color: white;
+  background: $green40;
+}
+.input-false{
+  color: white;
+  background: $red40;
+}
+
+//CODEPEN SECTION
+.codepen-box {padding: 0px 40px 20px 40px;}
+.cp_embed_iframe {
+  border-radius: 10px !important;
+}
+.embed-nav {
+  // padding-left: 20px !important;
+  background: $violet40 !important;
+}
+
+//THANK YOU SECTION
+.thank-you {
+    height: auto;
+    width: 100%;
+    float: left;
+    ul {
+        padding: 0px;
+        padding: 50px 0px;
+    }
+    li {
+        text-align: center;
+        list-style: none;
+    }
+}
+//FOOTER
+.footer {
+    height: 50px;
+    width: 100%;
+    background: $violet40;
+    line-height: 50px;
+    text-align: center;
+    float: left;
+    color: white;
+}
+/*##################################################
+    404 Page Styling
+##################################################*/
+.error-page{
+    height: 100%;
+    width: 100%;
+    background: $violet40;
+    h1 {
+        color: $gray80 !important;
+        font-size: 2em;
+    }
+    p {color: $gray80 !important;}
+}
+.return-button {
+    background: $gray80;
+    color: white;
+    height: 40px;
+    width: 100px;
+    text-align: center;
+    padding: 0px 20px;
+    display: block;
+    margin: 20px auto;
+    text-decoration: none;
+    line-height: 40px;
+}
+/*##################################################
+    MEDIA QUERIES
+##################################################*/
+@media screen and (max-width: 1000px) {
+    .wrapper {width: 90%;}
+
+    .header {
+        height: 60px;
+        padding: 5px;
+        img {height: 60px;}
+    }
+    .intro-box,
+    .results-box {
+        min-height: 40px;
+        height: auto;
+        padding: 20px;
+        p {
+            padding: 0px;
+            margin: 0px;
+        }
+    }
+    .codepen-box {padding: 0px 10px 20px 10px;}
+    .input-section {
+        width: 80%;
+        display: block;
+        margin: 0px auto;
+        input[type="text"] {
+            width: 80%;
+            font-size: 1.2em;
+
+        }
+    }
+    .footer {
+        width: 100%;
+        position: relative;
+        font-size: 0.9em;
+    }
+}
